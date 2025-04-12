@@ -28,8 +28,6 @@ function toggleDarkMode() {
     if (comments) {
         prompt += `\n\nAdditional context/comments from user:\n${comments}`;
       }
-      
-    const prompt = `Generate a ${tone} reply to the following email:\n\n${input}`;
 
     const requestBody = {
       contents: [
