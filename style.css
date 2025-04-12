@@ -256,6 +256,14 @@
 @media (max-width: 768px) {
     .wrapper {
       padding: 1.5rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .wrapper.two-columns {
+      flex-direction: column;
+      align-items: center;
     }
   
     h1 {
@@ -306,6 +314,7 @@
     .action-buttons button {
       width: 100%;
       font-size: 0.9rem;
+      margin: 0;
     }
   
     .dark-toggle {
@@ -319,6 +328,10 @@
   
     textarea {
       height: 100px;
+    }
+
+    #output{
+      margin-bottom: 2rem;
     }
   
     button {
