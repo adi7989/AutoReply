@@ -1,2 +1,66 @@
 //We will start coding from here
-//digerogergo
+//digerogergo<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Replyify - Smart Email Reply Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+  <div id="tsparticles"></div>
+
+  <div class="dark-toggle">
+    <button onclick="toggleDarkMode()" id="darkModeBtn" title="Toggle Dark Mode">🌙</button>
+  </div>
+
+  <section class="wrapper">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" class="hero-image" alt="Email Icon">
+
+      <h1>Replyify - Smart Email Reply Generator</h1>
+      <label for="emailInput"></label>
+      <div class="textarea-container">
+        <textarea id="emailInput" placeholder="Paste or write your email here..."></textarea>
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828925.png" class="copy-icon" onclick="copyEmailContent()" alt="Copy" />
+      </div>
+
+      <label for="toneSelect">Select Tone</label>
+      <select id="toneSelect">
+        <option value="Professional">Professional</option>
+        <option value="Friendly">Friendly</option>
+        <option value="Sad">Sad</option>
+        <option value="Excited">Excited</option>
+        <option value="Sarcastic">Sarcastic</option>
+        <option value="Apologetic">Apologetic</option>
+      </select>
+
+      <label for="langSelect">Select Language</label>
+      <select id="langSelect">
+        <option value="English">English</option>
+        <option value="Hindi">Hindi</option>
+        <option value="Spanish">Spanish</option>
+        <option value="French">French</option>
+        <option value="German">German</option>
+      </select>
+
+      <button onclick="generateReply()" id="generateBtn">Generate Reply</button>
+
+      <div id="loader" class="hidden">
+        <div class="typing-dots"><span></span><span></span><span></span></div>
+        <p style="text-align:center;">Generating reply...</p>
+      </div>
+
+      <div id="output"></div>
+
+      <div class="action-buttons hidden" id="actions">
+        <button onclick="copyReply()">Copy Reply</button>
+        <button onclick="generateReply()">Regenerate Reply</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
