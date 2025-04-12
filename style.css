@@ -222,3 +222,77 @@
     .card { padding: 1.5rem; }
     .hero-image { height: 80px; }
   }
+ /* Medium screens: tablets */
+@media (max-width: 768px) {
+    .wrapper {
+      padding: 1.5rem;
+    }
+  
+    h1 {
+      font-size: 1.6rem;
+    }
+  
+    .subtitle {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      font-size: 0.95rem;
+      padding: 0.75rem;
+    }
+  
+    select,
+    textarea {
+      font-size: 0.95rem;
+      padding: 0.85rem;
+    }
+  
+    .copy-icon {
+      width: 20px;
+      top: 10px;
+      right: 10px;
+    }
+  }
+  
+  /* Small screens: mobile phones */
+  @media (max-width: 480px) {
+    .card {
+      padding: 1rem;
+      border-radius: 16px;
+    }
+  
+    .hero-image {
+      height: 60px;
+    }
+  
+    h1 {
+      font-size: 1.4rem;
+    }
+  
+    .action-buttons {
+      flex-direction: column;
+    }
+  
+    .action-buttons button {
+      width: 100%;
+      font-size: 0.9rem;
+    }
+  
+    .dark-toggle {
+      top: 12px;
+      right: 12px;
+    }
+  
+    .dark-toggle button {
+      font-size: 1.2rem;
+    }
+  
+    textarea {
+      height: 100px;
+    }
+  
+    button {
+      padding: 0.7rem;
+    }
+  }
+  
