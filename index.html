@@ -6,6 +6,7 @@
   <title>Replyify - Smart Email Reply Generator</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.0/dist/tesseract.min.js"></script>
 </head>
 <body>
   <div id="tsparticles"></div>
@@ -23,6 +24,9 @@
       <div class="textarea-container">
         <textarea id="emailInput" placeholder="Paste or write your email here..."></textarea>
         <img src="https://cdn-icons-png.flaticon.com/512/1828/1828925.png" class="copy-icon" onclick="copyEmailContent()" alt="Copy" />
+        
+      <label for="imageInput">Or upload a screenshot</label>
+      <input type="file" id="imageInput" accept="image/*" />
       </div>
 
       <label for="toneSelect">Select Tone</label>
