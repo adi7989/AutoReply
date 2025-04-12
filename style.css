@@ -56,8 +56,40 @@
   .dark-toggle button {
     background: #6366f1;
     border: none;
-    font-size: 1.4rem;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .icon-wrapper{
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    width: 100px;
+  }
+
+  .icon{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dark-toggle button .icon-wrapper {
+    transform: translateX(0);
+  }
+
+  body.dark-mode .dark-toggle button .icon-wrapper {
+    transform: translateX(-50px);
+  }
+
+  .dark-toggle button:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 8px #f1c40f;
   }
 
   .wrapper {

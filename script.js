@@ -1,8 +1,6 @@
 function toggleDarkMode() {
   const body = document.body;
-  const btn = document.getElementById("darkModeBtn");
   body.classList.toggle("dark-mode");
-  btn.innerText = body.classList.contains("dark-mode") ? "☀️" : "🌙";
 }
 
 function copyEmailContent() {
