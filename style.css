@@ -116,6 +116,34 @@
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
   }
 
+  input[type="file"]{
+    display: none;
+  }
+  .custom-image-input{
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    padding: 0.9rem;
+    font-weight: 400;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .custom-image-input:hover {
+    background: #4f46e5;
+  }
+
+  #fileName{
+    margin-top: 0.3rem;
+    font-size: 0.97rem;
+    color: var(--text-light);
+  }
+
   h1 {
     text-align: center;
     font-size: 2rem;
@@ -155,6 +183,10 @@
   body.dark-mode select {
     background-color: var(--input-dark);
     border: 1px solid var(--border-dark);
+    color: var(--text-dark);
+  }
+
+  body.dark-mode #fileName {
     color: var(--text-dark);
   }
 
