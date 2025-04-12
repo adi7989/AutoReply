@@ -16,12 +16,19 @@ function toggleDarkMode() {
     const output = document.getElementById('output');
     const loader = document.getElementById('loader');
     const actions = document.getElementById('actions');
+    const comments = document.getElementById('commentInput')?.value.trim();  //user prompt
+
 
     if (!input) {
       output.innerHTML = "<p>Please enter some email content first.</p>";
       return;
     }
-
+      // added this for the user prompt section
+    let prompt = `Generate a ${tone} reply to the following email:\n\n${input}`;
+    if (comments) {
+        prompt += `\n\nAdditional context/comments from user:\n${comments}`;
+      }
+      
     const prompt = `Generate a ${tone} reply to the following email:\n\n${input}`;
 
     const requestBody = {
