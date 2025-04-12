@@ -10,6 +10,12 @@ function toggleDarkMode() {
     navigator.clipboard.writeText(text).then(() => alert("Email content copied!"));
   }
 
+  const wrapper = document.getElementById('wrapper');
+  const generateBtn = document.getElementById('generateBtn');
+  generateBtn.addEventListener('click', () => {
+    wrapper.classList.add('two-columns');
+  });
+
   async function generateReply() {
     const input = document.getElementById('emailInput').value.trim();
     const tone = document.getElementById('toneSelect').value;

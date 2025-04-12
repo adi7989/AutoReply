@@ -14,8 +14,8 @@
     <button onclick="toggleDarkMode()" id="darkModeBtn" title="Toggle Dark Mode">🌙</button>
   </div>
 
-  <section class="wrapper">
-    <div class="card">
+  <section class="wrapper" id="wrapper">
+    <div class="card email-card">
       <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" class="hero-image" alt="Email Icon">
 
       <h1>Replyify - Smart Email Reply Generator</h1>
@@ -41,6 +41,8 @@
       <textarea id="commentInput" placeholder="Add any extra info or context here..."></textarea>
 
       <button onclick="generateReply()" id="generateBtn">Generate Reply</button>
+    </div>
+    <div class="card reply-card">
 
       <div id="loader" class="hidden">
         <div class="typing-dots"><span></span><span></span><span></span></div>
