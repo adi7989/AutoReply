@@ -28,6 +28,7 @@
 
       <label for="toneSelect">Select Tone</label>
       <select id="toneSelect">
+        <option value="Select">Select</option>
         <option value="Professional">Professional</option>
         <option value="Friendly">Friendly</option>
         <option value="Sad">Sad</option>
@@ -36,14 +37,9 @@
         <option value="Apologetic">Apologetic</option>
       </select>
 
-      <label for="langSelect">Select Language</label>
-      <select id="langSelect">
-        <option value="English">English</option>
-        <option value="Hindi">Hindi</option>
-        <option value="Spanish">Spanish</option>
-        <option value="French">French</option>
-        <option value="German">German</option>
-      </select>
+     
+      <label for="commentInput">Add Comments (optional)</label>
+      <textarea id="commentInput" placeholder="Add any extra info or context here..."></textarea>
 
       <button onclick="generateReply()" id="generateBtn">Generate Reply</button>
 
