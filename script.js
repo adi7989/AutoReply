@@ -1,7 +1,27 @@
 function toggleDarkMode() {
-  const body = document.body;
-  body.classList.toggle("dark-mode");
-}
+   const body = document.body;
+   body.classList.toggle("dark-mode");
+  
+   const isDark = body.classList.contains("dark-mode");
+   localStorage.setItem("theme", isDark ? "dark" : "light");
+  }
+  
+  window.addEventListener("DOMContentLoaded", () => {
+   const isDark = localStorage.getItem("theme") === "dark";
+   const body = document.body;
+  
+   if (isDark) {
+    body.classList.add("dark-mode");
+   }
+
+   body.classList.add("no-transition");
+   setTimeout(() => {
+    body.classList.remove("no-transition");
+   }, 50);
+  });
+  
+  document.getElementById("darkModeBtn").addEventListener("click", toggleDarkMode);
+  
 
 function copyEmailContent() {
   const text = document.getElementById("emailInput").value;

@@ -87,6 +87,10 @@
     transform: translateX(-50px);
   }
 
+  .no-transition .dark-toggle button .icon-wrapper {
+    transition: none !important;
+  }
+
   .dark-toggle button:hover {
     transform: scale(1.1);
     text-shadow: 0 0 8px #f1c40f;
