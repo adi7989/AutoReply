@@ -370,7 +370,6 @@ body.dark-mode #output {
     border-radius: 16px;
   }
 
-<<<<<<< HEAD
   #receiverEmail{
     margin-top: 0.5rem;
     padding: 1rem;
@@ -383,14 +382,12 @@ body.dark-mode #output {
 
   body.dark-mode #output, body.dark-mode #receiverEmail {
     background-color: #242424;
-=======
   .hero-image {
     height: 60px;
   }
 
   h1 {
     font-size: 1.4rem;
->>>>>>> 8d0f2dff069e6b13bbdd531f8f8c9ff01bb155dc
   }
 
   .row{
@@ -400,10 +397,7 @@ body.dark-mode #output {
   }
 
   .action-buttons {
-<<<<<<< HEAD
     display: flex;
-=======
->>>>>>> 8d0f2dff069e6b13bbdd531f8f8c9ff01bb155dc
     flex-direction: column;
   }
 
@@ -422,7 +416,6 @@ body.dark-mode #output {
     font-size: 1.2rem;
   }
 
-<<<<<<< HEAD
   .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
   .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
 
@@ -432,10 +425,8 @@ body.dark-mode #output {
   @keyframes bounce {
     from { transform: translateY(0); }
     to { transform: translateY(-8px); }
-=======
   textarea {
     height: 100px;
->>>>>>> 8d0f2dff069e6b13bbdd531f8f8c9ff01bb155dc
   }
 
   #output{
@@ -446,4 +437,3 @@ body.dark-mode #output {
     padding: 0.7rem;
   }
 }
-
