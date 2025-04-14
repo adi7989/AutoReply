@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.0/dist/tesseract.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 </head>
 <body>
   <div id="tsparticles"></div>
@@ -19,6 +21,7 @@
       </span>
     </button>
   </div>
+
 
   <section class="wrapper" id="wrapper">
     <div class="card email-card">
@@ -51,6 +54,7 @@
       <textarea id="commentInput" placeholder="Add any extra info or context here..."></textarea>
 
       <button onclick="generateReply()" id="generateBtn">Generate Reply</button>
+
     </div>
     <div class="card reply-card">
 
@@ -64,6 +68,17 @@
       <div class="action-buttons hidden" id="actions">
         <button onclick="copyReply()">Copy Reply</button>
         <button onclick="generateReply()">Regenerate Reply</button>
+        <button onclick="sendGeneratedReply()">Send Reply via Gmail</button>
+
+        
+        <!-- <label for="senderEmail">Your Gmail:</label>
+        <input type="email" id="senderEmail" placeholder="yourname@gmail.com" required> -->
+
+        <label for="receiverEmail">Recipient Gmail:</label>
+        <input type="email" id="receiverEmail" placeholder="recipient@gmail.com" required>
+        
+
+
       </div>
     </div>
   </section>
