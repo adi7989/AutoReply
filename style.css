@@ -37,6 +37,10 @@
     color: var(--text-dark);
   }
 
+  body.dark-mode .hero-image, body.dark-mode .copy-icon{
+    filter: brightness(0) invert(0.9);
+  }
+
   #tsparticles {
     position: fixed;
     top: 0;

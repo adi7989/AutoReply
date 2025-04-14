@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Replyify - Smart Email Reply Generator</title>
+  <title>Replify - Smart Email Reply Generator</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.0/dist/tesseract.min.js"></script>
@@ -27,7 +27,7 @@
     <div class="card email-card">
       <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" class="hero-image" alt="Email Icon">
 
-      <h1>Replyify - Smart Email Reply Generator</h1>
+      <h1>Replify - Smart Email Reply Generator</h1>
       <label for="emailInput"></label>
       <div class="textarea-container">
         <textarea id="emailInput" placeholder="Paste or write your email here..."></textarea>
@@ -66,16 +66,15 @@
       <div id="output"></div>
 
       <div class="action-buttons hidden" id="actions">
-        <button onclick="copyReply()">Copy Reply</button>
+          <button onclick="copyReply()">Copy Reply</button>
         <button onclick="generateReply()">Regenerate Reply</button>
         <button onclick="sendGeneratedReply()">Send Reply via Gmail</button>
 
-        
         <!-- <label for="senderEmail">Your Gmail:</label>
         <input type="email" id="senderEmail" placeholder="yourname@gmail.com" required> -->
-
-        <label for="receiverEmail">Recipient Gmail:</label>
+          <label for="receiverEmail">Recipient Gmail:</label>
         <input type="email" id="receiverEmail" placeholder="recipient@gmail.com" required>
+        
         
 
 
