@@ -1,5 +1,3 @@
-
-
 function toggleDarkMode() {
   const body = document.body;
   body.classList.toggle("dark-mode");
@@ -69,14 +67,26 @@ tsParticles.load("tsparticles", {
 
 //file upload check
 const fileInput = document.getElementById('imageInput');
-const fileNameDisplay= document.getElementById('fileName');
+const fileNameDisplay = document.getElementById('fileName');
+const imagePreview = document.getElementById('imagePreview');
 
-fileInput.addEventListener('change', function() {
- if(fileInput.files.length > 0) {
-   fileNameDisplay.textContent=`Selected: ${fileInput.files[0].name}`;}
- else{
-   fileNameDisplay.textContent='No file selected.';}
- });
+fileInput.addEventListener('change', function () {
+  if (fileInput.files.length > 0) {
+    const file = fileInput.files[0];
+    fileNameDisplay.textContent = `Selected: ${file.name}`;
+
+    // Preview image
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      imagePreview.src = e.target.result;
+      imagePreview.style.display = "block";
+    };
+    reader.readAsDataURL(file);
+  } else {
+    fileNameDisplay.textContent = 'No file selected.';
+    imagePreview.style.display = "none";
+  }
+});
 
 
 
@@ -170,13 +180,9 @@ async function extractTextFromImage(file) {
    reader.readAsDataURL(file);
  });
 }
-
-
 //sending gmail
 
   emailjs.init("uGk-AyTq4jC_2kDRM"); 
-
-
   function sendGeneratedReply() {
     const replyText = document.getElementById("output").innerText.replace("AI Reply:", "").trim();
    // const senderEmail = document.getElementById('senderEmail').value.trim();
