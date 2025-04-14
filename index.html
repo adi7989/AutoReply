@@ -66,17 +66,24 @@
       <div id="output"></div>
 
       <div class="action-buttons hidden" id="actions">
+
+        <div class="row">
           <button onclick="copyReply()">Copy Reply</button>
-        <button onclick="generateReply()">Regenerate Reply</button>
-        <button onclick="sendGeneratedReply()">Send Reply via Gmail</button>
+          <button onclick="generateReply()" id="regenerateBtn">Regenerate Reply</button>
+        </div>
+          
+
+        <div>
+          <button onclick="sendGeneratedReply()">Send Reply via Gmail</button>
 
         <!-- <label for="senderEmail">Your Gmail:</label>
         <input type="email" id="senderEmail" placeholder="yourname@gmail.com" required> -->
+        <div id ="emailInputs" style="display:none; margin-top: 10px;">
           <label for="receiverEmail">Recipient Gmail:</label>
         <input type="email" id="receiverEmail" placeholder="recipient@gmail.com" required>
-        
-        
-
+        <div id="messageBox" class="hidden"></div>
+        </div>
+        </div>
 
       </div>
     </div>

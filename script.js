@@ -178,12 +178,15 @@ async function extractTextFromImage(file) {
 
 
   function sendGeneratedReply() {
+
+    document.getElementById("emailInputs").style.display = "block";
+
     const replyText = document.getElementById("output").innerText.replace("AI Reply:", "").trim();
    // const senderEmail = document.getElementById('senderEmail').value.trim();
     const receiverEmail = document.getElementById('receiverEmail').value.trim();
   
-    if (!replyText || !receiverEmail) {
-      alert("Please ensure a reply is generated and both emails are filled out.");
+    if (emailInputsvisible&&(!replyText || !receiverEmail)) {
+      showMessage("Please ensure a reply is generated and both emails are filled out.");
       return;
     }
   
@@ -197,6 +200,12 @@ async function extractTextFromImage(file) {
       console.error(err);
       alert('Failed to send email via EmailJS.');
     });
+  }
+
+  function showMessage(message) {
+    const messageBox=document.getElementById("messageBox");
+    messageBox.innerText = message;
+    messageBox.classList.remove("hidden");
   }
   
   

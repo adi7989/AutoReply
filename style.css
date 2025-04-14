@@ -275,14 +275,29 @@
     transition: background 0.3s;
   }
 
-  body.dark-mode #output {
+  #receiverEmail{
+    margin-top: 0.5rem;
+    padding: 1rem;
+    background-color: #f0f2f5;
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    white-space: pre-wrap;
+    transition: background 0.3s;
+  }
+
+  body.dark-mode #output, body.dark-mode #receiverEmail {
     background-color: #242424;
+  }
+
+  .row{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
   }
 
   .action-buttons {
     display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+    flex-direction: column;
   }
 
   .action-buttons button {
@@ -309,6 +324,7 @@
   .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
 
   .hidden { display: none; }
+
 
   @keyframes bounce {
     from { transform: translateY(0); }
