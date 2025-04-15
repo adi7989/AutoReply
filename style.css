@@ -201,15 +201,6 @@ input[type="file"] {
   color: var(--text-light);
 }
 
-#imagePreview{
-  margin-top: 1rem;
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 #imagePreview {
   margin-top: 1rem;
   width: 100%;
@@ -306,6 +297,7 @@ button:hover {
   background: #4f46e5;
 }
 
+/* ====== Output and Email Box Styling ====== */
 #output {
   margin-top: 1.5rem;
   padding: 1rem;
@@ -325,7 +317,8 @@ button:hover {
   transition: 0.3s;
 }
 
-body.dark-mode #output {
+body.dark-mode #output,
+body.dark-mode #receiverEmail {
   background-color: #242424;
 }
 
@@ -386,8 +379,14 @@ body.dark-mode #output {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ====== Responsive Design: Tablet & Mobile ====== */
@@ -481,15 +480,14 @@ body.dark-mode #output {
   }
 
   .hero-image {
-    height: 60px;
+    width: 60px;
   }
 
-  h1 {
-    font-size: 1.4rem;
-  }
-
-  .action-buttons {
-    flex-direction: column;
+  textarea {
+    min-height: 110px;
+    padding: 0.9rem;
+    font-size: 0.9rem;
+    border-radius: 10px;
   }
 
   button {
@@ -548,12 +546,22 @@ body.dark-mode #output {
     width: 55px;
   }
 
-  #output{
-    margin-bottom: 2rem;
+  select,
+  input[type="email"] {
+    padding: 0.8rem;
   }
 
-  button {
-    padding: 0.7rem;
+  .dark-toggle {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  #darkModeBtn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .icon {
+    font-size: 1.2rem;
   }
 }
-

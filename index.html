@@ -5,41 +5,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Replify - Smart Email Reply Generator</title>
+  <!-- Linking to the external CSS file for styling -->
   <link rel="stylesheet" href="style.css" />
+  <!-- Including the tsparticles library for particle effects -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <!-- Including Tesseract.js for OCR (Optical Character Recognition) functionality -->
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.0/dist/tesseract.min.js"></script>
+  <!-- Including EmailJS for sending emails through Gmail -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
 </head>
 
 <body>
+  <!-- Div for particle effects -->
   <div id="tsparticles"></div>
+  
+  <!-- Dark mode toggle button -->
   <div class="dark-toggle">
     <button id="darkModeBtn" title="Theme Toggle">
       <span class="icon-wrapper">
+        <!-- Icons for dark and light mode -->
         <span class="icon moon">🌙</span>
         <span class="icon sun">☀️</span>
       </span>
     </button>
   </div>
 
-
+  <!-- Main wrapper section for the content -->
   <section class="wrapper" id="wrapper">
     <div class="card email-card">
+      <!-- Email Icon image -->
       <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" class="hero-image" alt="Email Icon">
 
+      <!-- Title for the Smart Email Reply Generator -->
       <h1>Replify - Smart Email Reply Generator</h1>
+      
+      <!-- Textarea for the user to paste or write an email -->
       <label for="emailInput"></label>
       <div class="textarea-container">
         <textarea id="emailInput" placeholder="Paste or write your email here..."></textarea>
         
-
+        <!-- Custom file input for uploading a screenshot -->
         <label for="imageInput" class="custom-image-input">Upload a screenshot</label>
         <input type="file" id="imageInput" accept="image/*" />
         <p id="fileName"></p>
+        
+        <!-- Preview of the uploaded image -->
         <img id="imagePreview" style="margin-top: 1rem; max-width: 100%; border-radius: 12px; display: none;" />
       </div>
 
+      <!-- Dropdown for selecting the tone of the email reply -->
       <label for="toneSelect">Select Tone</label>
       <select id="toneSelect">
         <option value="Select">Select</option>
@@ -51,32 +65,41 @@
         <option value="Apologetic">Apologetic</option>
       </select>
 
-
+      <!-- Textarea for adding optional comments or context -->
       <label for="commentInput">Add Comments (optional)</label>
       <textarea id="commentInput" placeholder="Add any extra info or context here..."></textarea>
 
+      <!-- Button to generate the email reply -->
       <button onclick="generateReply()" id="generateBtn">Generate Reply</button>
-
     </div>
+
+    <!-- Card for displaying the generated reply -->
     <div class="card reply-card">
 
+      <!-- Loader animation while generating the reply -->
       <div id="loader" class="hidden">
         <div class="typing-dots"><span></span><span></span><span></span></div>
         <p style="text-align:center;">Generating reply...</p>
       </div>
 
+      <!-- Section for displaying the generated reply -->
       <div id="output"></div>
 
+      <!-- Action buttons for user interaction -->
       <div class="action-buttons hidden" id="actions">
 
         <div class="row">
+          <!-- Button to copy the reply -->
           <button onclick="copyReply()">Copy Reply</button>
+          <!-- Button to regenerate the reply -->
           <button onclick="generateReply()" id="regenerateBtn">Regenerate Reply</button>
         </div>
 
-
         <div>
+          <!-- Button to send the generated reply via Gmail -->
           <button onclick="sendGeneratedReply()">Send Reply via Gmail</button>
+          
+          <!-- Section for inputting recipient email address -->
           <div id="emailInputs" style="margin-top: 10px;">
             <label for="receiverEmail">Recipient Gmail:</label>
             <input type="email" id="receiverEmail" placeholder="recipient@gmail.com" required>
@@ -88,6 +111,7 @@
     </div>
   </section>
 
+  <!-- Including the external JavaScript file for functionality -->
   <script src="script.js"></script>
 </body>
 
