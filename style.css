@@ -321,6 +321,7 @@ button:hover {
 body.dark-mode #output,
 body.dark-mode #receiverEmail {
   background-color: #242424;
+  color: var(--text-dark);
 }
 
 /* ====== Flex Row Utility Class ====== */
