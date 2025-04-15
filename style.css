@@ -1,16 +1,16 @@
 /* ====== Root Variables: Theme colors, backgrounds, and elements ====== */
 :root {
-  --bg-light: linear-gradient(135deg, #fdf2f8, #e0f2fe); /* Light background gradient */
-  --bg-dark: linear-gradient(135deg, #0f172a, #1e293b); /* Dark background gradient */
-  --text-light: #1a1a1a; /* Light mode text color */
-  --text-dark: #f5f5f5; /* Dark mode text color */
-  --card-light: rgba(255, 255, 255, 0.85); /* Light card background */
-  --card-dark: rgba(30, 30, 30, 0.9); /* Dark card background */
-  --input-light: #ffffff; /* Light input field */
-  --input-dark: #2c2c2c; /* Dark input field */
-  --border-light: #ddd; /* Light border color */
-  --border-dark: #444; /* Dark border color */
-  --primary: #6366f1; /* Primary action color */
+  --bg-light: linear-gradient(135deg, #fdf2f8, #e0f2fe); 
+  --bg-dark: linear-gradient(135deg, #0f172a, #1e293b); 
+  --text-light: #1a1a1a; 
+  --text-dark: #f5f5f5; 
+  --card-light: rgba(255, 255, 255, 0.85);
+  --card-dark: rgba(30, 30, 30, 0.9); 
+  --input-light: #ffffff; 
+  --input-dark: #2c2c2c; 
+  --border-light: #ddd; 
+  --border-dark: #444;
+  --primary: #6366f1; 
 }
 
 /* ====== Global Reset ====== */
