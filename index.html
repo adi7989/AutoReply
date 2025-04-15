@@ -2,31 +2,18 @@
 <html lang="en">
 
 <head>
-  <!-- Meta tags for character encoding and responsive design -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Page title -->
   <title>Replify - Smart Email Reply Generator</title>
-
-  <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Particle animation library -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
-
-  <!-- OCR (Image to Text) library -->
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.0/dist/tesseract.min.js"></script>
-
-  <!-- EmailJS library for sending emails -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 </head>
 
 <body>
-  <!-- Particle background container -->
   <div id="tsparticles"></div>
-
-  <!-- Dark mode toggle button -->
   <div class="dark-toggle">
     <button id="darkModeBtn" title="Theme Toggle">
       <span class="icon-wrapper">
@@ -36,32 +23,23 @@
     </button>
   </div>
 
-  <!-- Main content section -->
-  <section class="wrapper" id="wrapper">
 
-    <!-- Card for user input -->
+  <section class="wrapper" id="wrapper">
     <div class="card email-card">
-      <!-- Email icon -->
       <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" class="hero-image" alt="Email Icon">
 
-      <!-- App heading -->
       <h1>Replify - Smart Email Reply Generator</h1>
-
-      <!-- Email input textarea -->
       <label for="emailInput"></label>
       <div class="textarea-container">
         <textarea id="emailInput" placeholder="Paste or write your email here..."></textarea>
+        
 
-        <!-- Image upload section for OCR -->
         <label for="imageInput" class="custom-image-input">Upload a screenshot</label>
         <input type="file" id="imageInput" accept="image/*" />
         <p id="fileName"></p>
-
-        <!-- Preview of uploaded image -->
         <img id="imagePreview" style="margin-top: 1rem; max-width: 100%; border-radius: 12px; display: none;" />
       </div>
 
-      <!-- Tone selection dropdown -->
       <label for="toneSelect">Select Tone</label>
       <select id="toneSelect">
         <option value="Select">Select</option>
@@ -73,35 +51,30 @@
         <option value="Apologetic">Apologetic</option>
       </select>
 
-      <!-- Optional comments input -->
+
       <label for="commentInput">Add Comments (optional)</label>
       <textarea id="commentInput" placeholder="Add any extra info or context here..."></textarea>
 
-      <!-- Button to generate AI reply -->
       <button onclick="generateReply()" id="generateBtn">Generate Reply</button>
-    </div>
 
-    <!-- Card for generated reply and actions -->
+    </div>
     <div class="card reply-card">
 
-      <!-- Loading indicator while reply is being generated -->
       <div id="loader" class="hidden">
         <div class="typing-dots"><span></span><span></span><span></span></div>
         <p style="text-align:center;">Generating reply...</p>
       </div>
 
-      <!-- Output area for generated reply -->
       <div id="output"></div>
 
-      <!-- Action buttons: copy, regenerate, and send -->
       <div class="action-buttons hidden" id="actions">
-        <!-- Row with copy and regenerate options -->
+
         <div class="row">
           <button onclick="copyReply()">Copy Reply</button>
           <button onclick="generateReply()" id="regenerateBtn">Regenerate Reply</button>
         </div>
 
-        <!-- Email sending section -->
+
         <div>
           <button onclick="sendGeneratedReply()">Send Reply via Gmail</button>
           <div id="emailInputs" style="margin-top: 10px;">
@@ -110,11 +83,11 @@
             <div id="messageBox" class="hidden"></div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Link to JavaScript file -->
   <script src="script.js"></script>
 </body>
 
