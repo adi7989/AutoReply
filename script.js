@@ -218,5 +218,4 @@ async function extractTextFromImage(file) {
     });
   }
   
-  
 
