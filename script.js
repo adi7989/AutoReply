@@ -205,7 +205,7 @@ document.getElementById('emailInputs').style.display = 'block';
     const senderEmail = document.getElementById('senderEmail').value.trim();
     const receiverEmail = document.getElementById('receiverEmail').value.trim();
   
-    if (!replyText || !receiverEmail ||senderEmail) {
+    if (!replyText || !receiverEmail|| !senderEmail) {
       alert("Please ensure a reply is generated and both emails are filled out.");
       return;
     }
@@ -222,4 +222,3 @@ document.getElementById('emailInputs').style.display = 'block';
     });
   }
   
-
