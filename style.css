@@ -319,14 +319,15 @@ button:hover {
   transition: 0.3s;
 }
 #senderEmail {
-   margin-top: 0.5rem;
-   padding: 1rem;
-   background-color: #f0f2f5;
-   border: 1px solid var(--border-light);
-   border-radius: 12px;
-   white-space: pre-wrap;
-   transition: 0.3s;
- }
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background-color: #f0f2f5;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  white-space: pre-wrap;
+  transition: 0.3s;
+}
+
 
 body.dark-mode #output,
 body.dark-mode #receiverEmail,
