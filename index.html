@@ -35,7 +35,7 @@
     <div class="card email-card">
       <!-- Email Icon image -->
       <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" class="hero-image" alt="Email Icon">
-
+      <img src=""
       <!-- Title for the Smart Email Reply Generator -->
       <h1>Replify - Smart Email Reply Generator</h1>
       
@@ -45,7 +45,7 @@
         <textarea id="emailInput" placeholder="Paste or write your email here..."></textarea>
         
         <!-- Custom file input for uploading a screenshot -->
-        <label for="imageInput" class="custom-image-input">Upload a screenshot</label>
+        <label for="imageInput" class="custom-image-input">Upload a Screenshot</label>
         <input type="file" id="imageInput" accept="image/*" />
         <p id="fileName"></p>
         
@@ -97,13 +97,21 @@
 
         <div>
           <!-- Button to send the generated reply via Gmail -->
-          <button onclick="sendGeneratedReply()">Send Reply via Gmail</button>
+          <button onclick="showEmailInput()">Send Reply via Gmail</button>
           
           <!-- Section for inputting recipient email address -->
-          <div id="emailInputs" style="margin-top: 10px;">
+          <div id="emailInputs" style="margin-top: 10px; display: none;">
+             <label for="senderEmail">Sender Gmail / Name:</label>
+             <div class="email-input-container">
+               <input type="email" id="senderEmail" placeholder="sender@gmail.com / Name" required>
+             </div>
+            
             <label for="receiverEmail">Recipient Gmail:</label>
-            <input type="email" id="receiverEmail" placeholder="recipient@gmail.com" required>
-            <div id="messageBox" class="hidden"></div>
+            <div class="email-input-container">
+              <input type="email" id="receiverEmail" placeholder="recipient@gmail.com" required>
+            <img src="https://cdn-icons-png.flaticon.com/512/786/786205.png" title="Reply" class="reply-icon" onclick="sendGeneratedReply()">
+            </div>
+            
           </div>
         </div>
 

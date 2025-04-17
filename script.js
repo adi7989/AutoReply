@@ -195,19 +195,20 @@ async function extractTextFromImage(file) {
   });
 }
 
+
   emailjs.init("uGk-AyTq4jC_2kDRM"); 
   function sendGeneratedReply() {
     const replyText = document.getElementById("output").innerText.replace("AI Reply:", "").trim();
-   // const senderEmail = document.getElementById('senderEmail').value.trim();
+    const senderEmail = document.getElementById('senderEmail').value.trim();
     const receiverEmail = document.getElementById('receiverEmail').value.trim();
   
-    if (!replyText || !receiverEmail) {
+    if (!replyText || !receiverEmail|| !senderEmail) {
       alert("Please ensure a reply is generated and both emails are filled out.");
       return;
     }
   
     emailjs.send("service_9najibj", "template_tj5yh3r", {
-      //from_email: senderEmail,
+      from_email: senderEmail,
       to_email: receiverEmail,
       message: replyText
     }).then(function (res) {
@@ -218,4 +219,3 @@ async function extractTextFromImage(file) {
     });
   }
   
-
