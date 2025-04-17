@@ -195,7 +195,9 @@ async function extractTextFromImage(file) {
   });
 }
 
-
+function showEmailInput() {
+document.getElementById('emailInputs').style.display = 'block';
+}
 
   emailjs.init("uGk-AyTq4jC_2kDRM"); 
   function sendGeneratedReply() {
@@ -219,3 +221,4 @@ async function extractTextFromImage(file) {
       alert('Failed to send email via EmailJS.');
     });
   }
+  
