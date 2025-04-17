@@ -196,6 +196,7 @@ async function extractTextFromImage(file) {
 }
 
 
+
   emailjs.init("uGk-AyTq4jC_2kDRM"); 
   function sendGeneratedReply() {
     const replyText = document.getElementById("output").innerText.replace("AI Reply:", "").trim();
@@ -218,4 +219,3 @@ async function extractTextFromImage(file) {
       alert('Failed to send email via EmailJS.');
     });
   }
-  
